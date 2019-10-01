@@ -1,6 +1,7 @@
 # HexInverter
 
 A simple Hex Inverter! It takes a list of either raw bytes, or user input, and inverts them! It then outputs the inverted bytes to console, and a .dat file
+(This is mostly just me messing around with git, so it's a pretty simple project. if you can even call it a "project")
 
 ### Prerequisites
 

@@ -17,14 +17,14 @@ javac HexInverter.java
 
 Open a local shell in the repo, and run using java in the command line
 ```
-java HexInverter -h FF FF FF FF ...
+java HexInverter -h [File Out] FF FF FF FF ...
 java HexInverter -f [File In] [File Out]
 java HexInverter -table
 ```
 -h will take a list of bytes, and invert them. it must be in format of "01 02 03 04 05" with maximum byte of "FF"
--f will take an input file, and an output file, and invert the bytes
+-f will take an input file, and an output file, and invert the bytes, it will always treat the input file as ASCII characters. so "7f" in a example.txt will be parsed as "37 66"
 
-Both -h and -f will print the input list, and the output list in the console, and write to a binary file. -h will write to HexInverted.dat
+Both -h and -f will print the input list, and the output list in the console, and write to a binary file of your choosing.
 
 -table will print a simple ascii table to the screen
 

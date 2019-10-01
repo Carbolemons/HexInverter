@@ -8,18 +8,19 @@ A simple Hex Inverter! It takes a list of either raw bytes, or user input, and i
 Java 7 Minimum
 
 ### Installing
-Clone the repository, and Build using javac in the command line
+Clone the repository, open a local shell in your repo and type build, or just use javac to compile the .java file
 ```
-javac HexInverter.java
+C:/HexInverter> build
+C:/HexInverter> javac HexInverter.java
 ```
 
 ## Running the project
 
 Open a local shell in the repo, and run using java in the command line
 ```
-java HexInverter -h [File Out] FF FF FF FF ...
-java HexInverter -f [File In] [File Out]
-java HexInverter -table
+C:/HexInverter> java HexInverter -h [File Out] FF FF FF FF ...
+C:/HexInverter> java HexInverter -f [File In] [File Out]
+C:/HexInverter> java HexInverter -table
 ```
 -h will take a list of bytes, and invert them. it must be in format of "01 02 03 04 05" with maximum byte of "FF"
 -f will take an input file, and an output file, and invert the bytes, it will always treat the input file as ASCII characters. so "7f" in a example.txt will be parsed as "37 66"

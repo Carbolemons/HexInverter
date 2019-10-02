@@ -1,24 +1,18 @@
 import java.io.*;
 import java.nio.file.*;
-
 /*
-*
 * Simple Hex Inverter, 
 * By: Carbolemons#0001 Discord
 * https://github.com/Carbolemons
 * 01.10.2019
-*
 */
-
 public class HexInverter {
-	
 	public static byte[] int_to_bytes(int data) { //convert integer into byte, shouldn't really even be larger than 255, or FF, but, go off?
-			return new byte[] {(byte)(data & 0xFF)};
+		return new byte[] {(byte)(data & 0xFF)};
 		}
 	public static boolean silent = false;
 	public static boolean verbose = false;
 	public static void main(String[] args) throws FileNotFoundException, IOException{
-		
 		if(args.length != 0){	// if there are command line arguments
 			System.out.println("Recieved Argument: " + args[0]);
 			switch(args[0]){
@@ -130,42 +124,25 @@ public class HexInverter {
 				break;
 				case "-table":
 					System.out.printf( //Command characters that do not show up on command line, in plain text
-					"- NUL : 00\n"+
-					"- SOH : 01\n"+
-					"- STX : 02\n"+
-					"- ETX : 03\n"+
-					"- EOT : 04\n"+
-					"- ENQ : 05\n"+
-					"- ACK : 06\n"+
-					"- BEL : 07\n"+
-					"- BS  : 08\n"+
-					"- HT  : 09\n"+
-					"- LF  : 0A\n"+
-					"- VT  : 0B\n"+
-					"- FF  : 0C\n"+
-					"- CR  : 0D\n"+
-					"- SO  : 0E\n"+
-					"- SI  : 0F\n"+
-					"- DLE : 10\n"+
-					"- DC1 : 11\n"+
-					"- DC2 : 12\n"+
-					"- DC3 : 13\n"+
-					"- DC4 : 14\n"+
-					"- NAK : 15\n"+
-					"- SYN : 16\n"+
-					"- ETB : 17\n"+
-					"- CAN : 18\n"+
-					"- EM  : 19\n"+
-					"- SUB : 1A\n"+
-					"- ESC : 1B\n"+
-					"- FS  : 1C\n"+
-					"- GS  : 1D\n"+
-					"- RS  : 1E\n"+
-					"- US  : 1F\n");
-					for (int i = 32; i < 127; i++){ //loops and displays hex, and corrisponding ascii char up to DEL on ASCII table
+					"- NUL : 00\n"+"- SOH : 01\n"+"- STX : 02\n"+"- ETX : 03\n"+"- EOT : 04\n"+"- ENQ : 05\n"+"- ACK : 06\n"+"- BEL : 07\n"+
+					"- BS  : 08\n"+"- HT  : 09\n"+"- LF  : 0A\n"+"- VT  : 0B\n"+"- FF  : 0C\n"+"- CR  : 0D\n"+"- SO  : 0E\n"+"- SI  : 0F\n"+
+					"- DLE : 10\n"+"- DC1 : 11\n"+"- DC2 : 12\n"+"- DC3 : 13\n"+"- DC4 : 14\n"+"- NAK : 15\n"+"- SYN : 16\n"+"- ETB : 17\n"+
+					"- CAN : 18\n"+"- EM  : 19\n"+"- SUB : 1A\n"+"- ESC : 1B\n"+"- FS  : 1C\n"+"- GS  : 1D\n"+"- RS  : 1E\n"+"- US  : 1F\n");
+					for (int i = 32; i < 127; i++){ //loops and displays hex, and corrisponding ascii 
 						System.out.printf("- %c   : %s \n", (char)i, Integer.toHexString(i));
 					}
-					System.out.println("- DEL : 7f");
+						System.out.printf("- DEL : 7f\n"+"- %c   : 80\n"+"- NIL : 81\n", (char)0x80);
+					for (int i = 130; i < 141; i++){ 
+						System.out.printf("- %c   : %s \n", (char)i, Integer.toHexString(i));
+					}
+						System.out.printf("- NIL : 8d\n"+"- %c   : 8e\n"+"- NIL : 8f\n"+"- NIL : 90\n", (char)0x8e);
+					for (int i = 145; i < 157; i++){ 
+						System.out.printf("- %c   : %s \n", (char)i, Integer.toHexString(i));
+					}
+						System.out.printf("- NIL : 9d\n"+"- %c   : 9e\n"+"- %c   : 9f\n"+"- NBS : a0\n", (char)0x9e, (char)0x9f);
+					for (int i = 161; i < 256; i++){ 
+						System.out.printf("- %c   : %s \n", (char)i, Integer.toHexString(i));
+					}
 				break;
 				default: //no proper argument found, it'll show this
 					System.out.println("This is a Command Line Java Class, please use proper arguments");

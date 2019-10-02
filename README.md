@@ -1,16 +1,17 @@
 # HexInverter
 
-A simple Hex Inverter! It takes a list of either raw bytes, or user input, and inverts them! It then outputs the inverted bytes to console, and a .dat file
+A simple Hex Inverter! It takes a list of either raw bytes, or user input, and inverts them! It then outputs the inverted bytes to console, and a file of choice
 (This is mostly just me messing around with git, so it's a pretty simple project. if you can even call it a "project")
 
 ### Prerequisites
 
-Java 7 Minimum
+Java 7 Minimum? JDK Installed.
 
 ### Installing
 Clone the repository, open a local shell in your repo and type build, or just use javac to compile the .java file
 ```
 C:/HexInverter> build
+or
 C:/HexInverter> javac HexInverter.java
 ```
 

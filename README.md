@@ -5,7 +5,9 @@ A simple Hex Inverter! It takes a list of either raw bytes, or user input, and i
 
 ### Prerequisites
 
-Java 7 Minimum? JDK Installed.
+Java 7 Minimum? 
+or
+jdk1.8.0_211 Installed.
 
 ### Installing
 Clone the repository, open a local shell in your repo and type build, or just use javac to compile the .java file

@@ -48,4 +48,4 @@ Appending both 's' and 'v' to -h (-svh) or -f (-svf), will result in both a sile
 
 ## Authors
 
-* **D. C** - *Initial work* - [Carbolemons](https://github.com/Carbolemons) - Discord Carbolemons#0001
+* **D. C** - *Initial work* - [Carbolemons](https://github.com/Carbolemons) - Discord pseudolime#2672 (screw you discord)
